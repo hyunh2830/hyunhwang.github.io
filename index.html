@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyun Hwang</title>
+<meta name="description" content="Hyun Hwang, The University of Texas at Austin. Research on how accounting information, standards, and institutions affect the efficiency of corporate investment.">
+<meta property="og:title" content="Hyun Hwang">
+<meta property="og:description" content="The University of Texas at Austin">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/png" href="https://www.mccombs.utexas.edu/wp-content/uploads/2024/10/mccombs_favicon-300x300.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* Colours: ledger paper, ink, and the red used to rule off a total */
+  :root {
+    color-scheme: light;
+    --paper: #eef2e9;
+    --ink: #1c2a22;
+    --ink-soft: #4f5f55;
+    --line: #768d73;
+    --red: #a82a3a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --paper: #121915;
+      --ink: #dde6de;
+      --ink-soft: #9daea2;
+      --line: #5e7563;
+      --red: #e8707f;
+    }
+  }
+
+  html {
+    background: var(--paper);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Spectral", Georgia, "Noto Serif KR", "AppleMyungjo", "Batang", serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    font-variant-numeric: oldstyle-nums;
+  }
+  @media (min-width: 40em) {
+    body { font-size: 1.125rem; }
+  }
+
+  .page {
+    width: min(100% - 2.75rem, 40rem);
+    margin-inline: auto;
+    padding: clamp(3rem, 10vw, 6.5rem) 0 5rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration-line: underline;
+    text-decoration-color: var(--line);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+  a:hover { text-decoration-color: var(--red); }
+  a:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Header: the name is ruled off with a double line, like a closing total */
+  .name {
+    width: fit-content;
+    margin: 0;
+    font-size: clamp(2.5rem, 1.6rem + 4vw, 3.75rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+  .name::after {
+    content: "";
+    display: block;
+    height: 7px;
+    margin-top: 0.18em;
+    border-top: 2px solid var(--red);
+    border-bottom: 2px solid var(--red);
+  }
+  .name a { text-decoration: none; }
+  .name a:hover { color: var(--ink-soft); }
+
+  .affiliation { margin-top: 1.5rem; }
+  .site-nav { margin-top: 0.15rem; color: var(--line); }
+  .site-nav a { color: var(--ink); }
+  .site-nav a[aria-current="page"] {
+    text-decoration-style: double;
+    text-decoration-color: var(--red);
+  }
+
+  h2 {
+    margin: 3.5rem 0 1rem;
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+  p { margin: 0; text-wrap: pretty; }
+  .lead { font-size: 1.1em; line-height: 1.55; }
+
+  /* Research papers */
+  .strands, .papers, .shelf { list-style: none; margin: 0; padding: 0; }
+  .strands { counter-reset: strand; }
+  .strands > li { counter-increment: strand; padding-left: 1.75rem; }
+  .strands > li + li { margin-top: 2.25rem; }
+  .strands h3 {
+    position: relative;
+    margin: 0 0 0.85rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+  .strands h3::before {
+    content: counter(strand) ".";
+    position: absolute;
+    left: -1.75rem;
+  }
+  .papers > li + li { margin-top: 1.15rem; }
+  .title { line-height: 1.45; text-indent: -0.42em; }
+  .with { color: var(--ink-soft); }
+  .meta { margin-top: 0.15rem; color: var(--ink-soft); font-size: 0.94em; line-height: 1.5; }
+  cite { font-style: italic; }
+
+  /* Space-filler page */
+  .shelf { margin-top: 3rem; color: var(--line); }
+  .shelf li { padding-left: 1.25em; text-indent: -1.25em; line-height: 1.5; }
+  .shelf li + li { margin-top: 0.6em; }
+  .shelf a { color: var(--ink); }
+  .shelf :lang(ko) { word-break: keep-all; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1 class="name">Hyun Hwang</h1>
+    <p class="affiliation"><a href="https://www.mccombs.utexas.edu/faculty-and-research/faculty-directory/hyun-hwang/">The University of Texas at Austin</a></p>
+    <nav class="site-nav" aria-label="Site">
+      <a href="https://utexas.box.com/s/rlpiyl7kzjq6jabiw93ycux8haneo6i7">CV</a> / <a href="links.html">Space-filler</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="interests">
+      <h2 id="interests">What are my research interests?</h2>
+      <p class="lead">Accounting defines what counts as capital and how its performance is measured. My work explores how accounting information, along with the standards and institutions behind it, affects the efficiency of corporate investment and the distribution of the surplus among market participants.</p>
+    </section>
+
+    <section aria-labelledby="papers">
+      <h2 id="papers">Research Papers</h2>
+
+      <!-- To add a paper: copy one <li> ... </li> block inside a "papers" list, then edit the link, title, and lines below it. -->
+      <ol class="strands" role="list">
+
+        <li>
+          <h3>The role of voluntary disclosure in affecting investment efficiency</h3>
+          <ul class="papers" role="list">
+            <li>
+              <p class="title">“<a href="https://doi.org/10.1287/mnsc.2022.01295">Internal Capital Allocation, Voluntary Disclosure, and Investment Efficiency</a>”</p>
+              <p class="meta"><cite>Management Science</cite> (2025) 71(12): 10088–10105.</p>
+              <p class="meta">Runner-up, <a href="https://aaahq.org/MAS/Awards/Dissertation-Award">The AAA MAS Dissertation Award</a>, 2020.</p>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>The role of standards in affecting investment efficiency and the surplus of market participants</h3>
+          <ul class="papers" role="list">
+            <li>
+              <p class="title">“<a href="https://publications.aaahq.org/accounting-review/article/99/1/139/11580/Accounting-Uniformity-Comparability-and-Resource">Accounting Standards Uniformity, Comparability, and Resource Allocation Efficiency</a>” <span class="with">with Carlos Corona and Zeqiong Huang</span></p>
+              <p class="meta"><cite>The Accounting Review</cite> (2024) 99(1): 139–161.</p>
+            </li>
+            <li>
+              <p class="title">“<a href="https://doi.org/10.2308/TAR-2024-0427">Auditing in the Digital Age: Determinants and Consequences of Technology Investment</a>” <span class="with">with Eunhee Kim and Minlei Ye</span></p>
+              <p class="meta"><cite>The Accounting Review</cite> (forthcoming).</p>
+            </li>
+            <li>
+              <p class="title">“<a href="https://doi.org/10.1016/j.jacceco.2026.101953">Macroeconomic Implications of Accounting Standards</a>” <span class="with">with Eunhee Kim and Volker Laux</span></p>
+              <p class="meta"><cite>Journal of Accounting and Economics</cite> (forthcoming).</p>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>The role of information production in affecting investment efficiency and the surplus of market participants</h3>
+          <ul class="papers" role="list">
+            <li>
+              <p class="title">“<a href="http://ssrn.com/abstract=5054504">Information Production, Real Investment, and External Financing</a>” <span class="with">with Eunhee Kim</span></p>
+              <p class="meta">Conditionally accepted at <cite>Contemporary Accounting Research</cite>.</p>
+            </li>
+            <li>
+              <p class="title">“<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5351347">Effects of Information Acquisition Costs on Corporate Investment and Surplus</a>” <span class="with">with Eunhee Kim and Volker Laux</span></p>
+              <p class="meta">Presentations: Duke, Columbia Burton 2025, AES 2025, UT Austin, HARC 2026.</p>
+            </li>
+          </ul>
+        </li>
+
+      </ol>
+    </section>
+  </main>
+
+</div>
+</body>
+</html>
